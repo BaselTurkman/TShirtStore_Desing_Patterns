@@ -12,17 +12,17 @@ public abstract class TShirtStore implements Subject {
         owner.update(smallShirtsSold, mediumShirtsSold, largeShirtsSold);
     }
 
-    public void sellSmallSize() {
+    private void sellSmallSize() {
         smallShirtsSold++;
         notifyObservers();
     }
 
-    public void sellMediumSize() {
+    private void sellMediumSize() {
         mediumShirtsSold++;
         notifyObservers();
     }
 
-    public void sellLargeSize() {
+    private void sellLargeSize() {
         largeShirtsSold++;
         notifyObservers();
     }
@@ -49,10 +49,9 @@ public abstract class TShirtStore implements Subject {
                 sellLargeSize();
             }
             default -> {
-                throw new IllegalAccessError("Size dose not support");
+                throw new IllegalArgumentException("Invalid size provided. This size is not supported.");
             }
         }
         return tShirt;
-
     }
 }

@@ -3,8 +3,8 @@ package Tshirtproject;
 public class MiddleEastSmallTshirt extends TShirt {
 
     public MiddleEastSmallTshirt() {
-        this.name = "Middle East Tshirt.";
-        this.description = "Middle East Small Tshirt.";
+        this.name = "MiddleEast Tshirt.";
+        this.description = "MiddleEast Small Tshirt.";
     }
 
     @Override
